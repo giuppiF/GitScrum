@@ -27,7 +27,7 @@
         <a href="{{route('wizard.step1')}}">{{trans('Sync Repos/Issues')}}</a>
     </div>
 
-    @include('partials.boxes.team', ['list'=>$user->team(), 'title'=>trans('Team')])
+    <!--@include('partials.boxes.team', ['list'=>$user->team(), 'title'=>trans('Team')])-->
 
     @include('partials.boxes.note', [ 'list' => $user,
         'type'=> 'user', 'title' => trans('Quick Notes'),
