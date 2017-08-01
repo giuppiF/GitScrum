@@ -30,12 +30,13 @@ class ProductBacklogObserver
 
     public function created(ProductBacklog $productBacklog)
     {
-        if (isset($productBacklog->is_api)) {
+        /*if (isset($productBacklog->is_api)) {
             $template = app(Auth::user()->provider)->tplRepository($productBacklog::$tmp, $productBacklog->slug);
+           \Log::info(print_r($template, true));
             $obj = ProductBacklog::slug($template->slug)->first();
             $obj->update(get_object_vars($template));
             $productBacklog::$tmp = null;
-        }
+        }*/
     }
 
     public function updating(ProductBacklog $productBacklog)
